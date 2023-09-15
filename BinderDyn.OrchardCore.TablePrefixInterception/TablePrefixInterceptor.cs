@@ -25,7 +25,7 @@ public class TablePrefixInterceptor : DbCommandInterceptor
         command.CommandText = AddMigrationsHistoryPrefix(command);
         foreach (var tableName in _tableNamesToReplace)
         {
-            AddTablePrefix(command, tableName);
+            command.CommandText = AddTablePrefix(command, tableName);
         }
 
         return result;
@@ -40,7 +40,7 @@ public class TablePrefixInterceptor : DbCommandInterceptor
         command.CommandText = AddMigrationsHistoryPrefix(command);
         foreach (var tableName in _tableNamesToReplace)
         {
-            AddTablePrefix(command, tableName);
+            command.CommandText = AddTablePrefix(command, tableName);
         }
 
         return result;
@@ -56,7 +56,7 @@ public class TablePrefixInterceptor : DbCommandInterceptor
         command.CommandText = AddMigrationsHistoryPrefix(command);
         foreach (var tableName in _tableNamesToReplace)
         {
-            AddTablePrefix(command, tableName);
+            command.CommandText = AddTablePrefix(command, tableName);
         }
 
         return new ValueTask<InterceptionResult<DbDataReader>>(result);
@@ -70,7 +70,7 @@ public class TablePrefixInterceptor : DbCommandInterceptor
         command.CommandText = AddMigrationsHistoryPrefix(command);
         foreach (var tableName in _tableNamesToReplace)
         {
-            AddTablePrefix(command, tableName);
+            command.CommandText = AddTablePrefix(command, tableName);
         }
 
         return result;
