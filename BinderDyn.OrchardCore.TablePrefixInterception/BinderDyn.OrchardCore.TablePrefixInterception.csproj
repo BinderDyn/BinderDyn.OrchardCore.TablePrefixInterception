@@ -5,10 +5,20 @@
         <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <Version>1.0.0</Version>
+        <Title>BinderDyn.OrchardCore.TablePrefixInterception</Title>
+        <Authors>Marvin Binder</Authors>
+        <Description>Intercept EntityFrameworkCore queries for OrchardCore to use relational database tables with prefixed table names</Description>
+        <Copyright>(c) 2023 Marvin Binder</Copyright>
+        <RepositoryUrl>https://github.com/BinderDyn/BinderDyn.OrchardCore.TablePrefixInterception/</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
+        <None Include="README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
 
     <ItemGroup>
