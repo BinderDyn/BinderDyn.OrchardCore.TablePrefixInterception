@@ -11,7 +11,11 @@
 ```
 
 2. The interceptor will use the configured prefix from the ShellSettings 
-3. Intercepted queries or commands to the database will use the prefix but only for EF Core related queries.
+3. Use the registered interceptor in your db context
+```csharp
+optionsBuilder.AddInterceptors(_serviceProvider.GetRequiredService<TablePrefixInterceptor>());
+```
+4. Intercepted queries or commands to the database will use the prefix but only for EF Core related queries.
 
 **Works with SqlServer, MySql and Postgres. SQLite is not supported.**
 
